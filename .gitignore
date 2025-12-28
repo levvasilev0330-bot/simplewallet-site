@@ -17,3 +17,6 @@ Thumbs.db
 *.log
 *.tmp
 
+# Примеры конфигурации
+*.example
+
