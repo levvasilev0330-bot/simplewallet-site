@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--
+    ИНСТРУКЦИЯ ПО ЗАПУСКУ ЛОКАЛЬНО:
+    
+    Этот сайт должен запускаться через HTTP сервер, а не через file:// протокол.
+    Скачивание APK не работает при открытии index.html напрямую (file://).
+    
+    Запуск локального сервера:
+    
+    Python 3:
+        python3 -m http.server 8000
+        Откройте: http://localhost:8000
+    
+    Node.js (npx):
+        npx http-server -p 8000
+        Откройте: http://localhost:8000
+    
+    PHP:
+        php -S localhost:8000
+        Откройте: http://localhost:8000
+    
+    После запуска сервера сайт будет доступен по адресу:
+    http://localhost:8000
+    
+    Примечание: APK файл скачивается из GitHub Releases, а не из локального сервера.
+-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Wallet — Простой кошелёк для скидочных карт</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Simple Wallet</div>
+                <nav class="nav">
+                    <a href="#features" class="nav-link">Возможности</a>
+                    <a href="#how-it-works" class="nav-link">Как работает</a>
+                    <a href="#download" class="nav-link">Скачать</a>
+                    <a href="https://github.com/levvasilev0330-bot/simplewallet-site/releases/latest/download/SimpleWallet-28122025.apk" class="btn btn-primary btn-small download-apk">Скачать APK</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Все скидочные карты — в одном месте</h1>
+                    <p class="hero-subtitle">
+                        Simple Wallet — простой кошелёк для скидочных карт. Генерируй QR/штрихкоды или прикрепляй фото карты и открывай нужную карту в 1 клик.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="https://github.com/levvasilev0330-bot/simplewallet-site/releases/latest/download/SimpleWallet-28122025.apk" class="btn btn-primary btn-large download-apk">Скачать APK для Android</a>
+                        <a href="#features" class="btn btn-secondary btn-large">Посмотреть возможности</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="mockup-cards">
+                                <div class="mockup-card-item">Карта 1</div>
+                                <div class="mockup-card-item active">Карта 2</div>
+                                <div class="mockup-card-item">Карта 3</div>
+                            </div>
+                            <div class="mockup-qr">
+                                <div class="qr-placeholder"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">1 клик до карты</h3>
+                    <p class="feature-description">Быстрый доступ без лишних экранов</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <rect x="7" y="7" width="10" height="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">QR и штрихкоды</h3>
+                    <p class="feature-description">Генерация и отображение на экране</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Фото карты</h3>
+                    <p class="feature-description">Прикрепляй изображение, если нет кода</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Порядок и поиск</h3>
+                    <p class="feature-description">Сортировка и поиск по названию</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Как это работает</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Добавь карту</h3>
+                    <p class="step-description">Введи данные или отсканируй код</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <path d="M9 9h6v6H9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Выбери формат</h3>
+                    <p class="step-description">QR / штрихкод / фото</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Покажи на кассе</h3>
+                    <p class="step-description">Готово</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <p class="trust-main">Ничего лишнего — только карты и быстрый доступ.</p>
+            <div class="trust-points">
+                <div class="trust-point">Без сложных настроек</div>
+                <div class="trust-point">Удобно одной рукой</div>
+                <div class="trust-point">Минималистичный интерфейс</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">Скачать Simple Wallet для Android</h2>
+            <p class="download-description">Скачайте APK и установите приложение на устройство Android.</p>
+            <div class="download-content">
+                <a href="https://github.com/levvasilev0330-bot/simplewallet-site/releases/latest/download/SimpleWallet-28122025.apk" class="btn btn-primary btn-large btn-download download-apk" id="downloadBtn">Скачать APK</a>
+                <div class="download-info">
+                    <p class="download-version">Версия: 1.0.0 • Размер: 15 MB</p>
+                    <a href="#install-guide" class="download-link">Инструкция по установке APK</a>
+                </div>
+                <div id="install-guide" class="install-note">
+                    <p>Если установка из APK запрещена, включите «Установка из неизвестных источников» в настройках.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copyright">Simple Wallet © 2025</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                    <a href="mailto:contact@simplewallet.app" class="footer-link">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle (optional) -->
+    <button class="dark-mode-toggle" aria-label="Переключить тему">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
