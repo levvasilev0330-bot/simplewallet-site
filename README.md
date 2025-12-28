@@ -335,4 +335,3 @@ gh release list                 # Список релизов
 - Используйте Auto Layout для всех компонентов
 - Padding: 24px или 40px (кратно 8px)
 - Gap: 16px, 24px, 32px (кратно 8px)
-
